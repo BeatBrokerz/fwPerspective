@@ -1,8 +1,8 @@
 flexloader.extendApp(function ($, App, config) {
 
     if (config.autoload) {
-        flexloader.addResource('modernizr-custom', { src: "//www.beatbrokerz.com/flex/js/modernizr.js" });
-        flexloader.addCSS(config.script.basepath + "widget.css");
+        flexloader.addResource({ src: "//www.beatbrokerz.com/flex/js/modernizr.js" });
+        flexloader.addResource({ src: config.script.basepath + "widget.css" });
     }
 
     App.ready(function () {
