@@ -65,7 +65,14 @@ flexloader.extendApp(function ($, App, config) {
                 return;
             }
 
-            modalWrapper.empty().append($('<div class="modal-title">').append(data.title)).append(data.content).append(data.footer).append('<div class="fwperspective-pad-foot"></div>').wrapInner('<div class="fwperspective-modal-inner">');
+            modalWrapper.empty()
+                .append($('<div class="modal-title">').append(data.title))
+                .append(data.content)
+                .append('<div class="fwperspective-pad-foot"></div>')
+                .append(data.footer)
+                .append('<div class="fwperspective-pad-foot"></div>')
+                .wrapInner('<div class="fwperspective-modal-inner">');
+
             docscroll = scrollY();
             contentWrapper.css({ top: docscroll * -1 + 'px' });
             document.body.scrollTop = document.documentElement.scrollTop = 0;
